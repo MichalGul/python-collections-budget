@@ -15,7 +15,7 @@ def test_task1_module1():
 @pytest.mark.test_task2_module1
 def test_task2_module1():
     assert 'expenses:Expense:Expenses' in get_assignments(FrequentExpenses), 'Do you have a `Expense.Expenses()` constructor call?'
-    assert 'expenses:read_expenses:data/spending_data.csv' in get_calls(FrequentExpenses), 'Are you calling the `read_expenses()` method with `"data/spending_data.csv"`?'
+    assert 'expenses:read_expenses:data/monefy-2021-10-11_06-11-44.csv' in get_calls(FrequentExpenses), 'Are you calling the `read_expenses()` method with `"data/spending_data.csv"`?'
 
 # spending_categories = []
 @pytest.mark.test_task3_module1
@@ -52,12 +52,12 @@ def test_task4_module1():
 # top5 = spending_counter.most_common(5)
 @pytest.mark.test_task5_module1
 def test_task5_module1():
-    assert 'top5:spending_counter:most_common:5' in get_assignments(FrequentExpenses), 'Did you call `spending_counter.most_common(5)` and assign to a variable `top5`?'
+    assert 'top6:spending_counter:most_common:6' in get_assignments(FrequentExpenses), 'Did you call `spending_counter.most_common(5)` and assign to a variable `top5`?'
 
 # categories, count = zip(*top5)
 @pytest.mark.test_task6_module1
 def test_task6_module1():
-    assert 'categories:count:zip:top5' in get_assignments(FrequentExpenses), 'Did you call `zip(*top5)` and assign to variables `categories, count`?'
+    assert 'categories:count:zip:top6' in get_assignments(FrequentExpenses), 'Did you call `zip(*top5)` and assign to variables `categories, count`?'
 
 # import matplotlib
 @pytest.mark.test_task7_module1
@@ -71,7 +71,7 @@ def test_task8_module1():
     # ax.bar(categories, count)
     assert 'ax:bar:categories:count' in get_calls(FrequentExpenses), 'Did you call `ax.bar()` with arguments `categories, count`?'
     # ax.set_title('# of Purchases by Category')
-    assert 'ax:set_title:# of Purchases by Category' in get_calls(FrequentExpenses), 'Did you call `ax.set_title()` with argument `"# of Purchases by Category"`?'
+    assert 'ax:set_title:# Expenses in category' in get_calls(FrequentExpenses), 'Did you call `ax.set_title()` with argument `"# Expenses in category"`?'
 
 @pytest.mark.test_task9_module1
 def test_task9_module1():

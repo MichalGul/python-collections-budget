@@ -268,7 +268,7 @@ def test_task9_module2():
                     
                     if 'expenses:Expense:Expenses' in assignments:
                         expenses_assign_found = True
-                    if 'expenses:read_expenses:data/spending_data.csv' in calls:
+                    if 'expenses:read_expenses:data/monefy-2021-10-11_06-11-44.csv' in calls:
                         read_expenses_call_found = True
 
     except Exception as e:
